@@ -55,15 +55,15 @@ webpackJsonp([0],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactLatex = __webpack_require__(272);
+	var _reactLatex = __webpack_require__(227);
 
 	var _reactLatex2 = _interopRequireDefault(_reactLatex);
 
 	var _reactRouter = __webpack_require__(163);
 
-	var _config = __webpack_require__(296);
+	var _config = __webpack_require__(252);
 
-	var _util = __webpack_require__(297);
+	var _util = __webpack_require__(253);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -212,7 +212,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 296:
+/***/ 252:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -231,7 +231,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 297:
+/***/ 253:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -245,11 +245,11 @@ webpackJsonp([0],{
 	exports.getIndex = getIndex;
 	exports.fetchProblem = fetchProblem;
 
-	var _jquery = __webpack_require__(298);
+	var _jquery = __webpack_require__(254);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _axios = __webpack_require__(250);
+	var _axios = __webpack_require__(255);
 
 	var _axios2 = _interopRequireDefault(_axios);
 
@@ -267,7 +267,7 @@ webpackJsonp([0],{
 	}
 
 	function getIndex() {
-	  return _axios2.default.get('/problems/index.json');
+	  return _axios2.default.get('./problems/index.json');
 	}
 
 	var XML = function () {
@@ -285,7 +285,7 @@ webpackJsonp([0],{
 	      var manifest = {
 	        description: {
 	          filename: descriptFile,
-	          url: "/problems/" + id + "/" + descriptFile,
+	          url: "./problems/" + id + "/" + descriptFile,
 	          text: ""
 	        },
 	        codes: []
@@ -296,7 +296,7 @@ webpackJsonp([0],{
 	        manifest.codes.push({
 	          language: language,
 	          source: source,
-	          url: "/problems/" + id + "/" + source,
+	          url: "./problems/" + id + "/" + source,
 	          text: ""
 	        });
 	      }
@@ -315,7 +315,7 @@ webpackJsonp([0],{
 	  } catch (e) {
 	    throw e;
 	  }
-	  _axios2.default.get("/problems/" + problemId + "/manifest.xml").then(function (res) {
+	  _axios2.default.get("./problems/" + problemId + "/manifest.xml").then(function (res) {
 	    var parser = getParser();
 	    var xmlTree = parseXML(parser, res.data);
 	    var xml = new XML(xmlTree);
@@ -370,7 +370,7 @@ webpackJsonp([0],{
 
 /***/ },
 
-/***/ 298:
+/***/ 254:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
