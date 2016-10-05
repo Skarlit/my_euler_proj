@@ -1,0 +1,6 @@
+<problem>
+  <description>description.tex</description>
+  <codes>
+    <code type="clojure">solver.clj</code>
+  </codes>
+</problem>

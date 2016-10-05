@@ -1,12 +1,45 @@
+<!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <script src="./dist/vendor.js"></script>
+  <script src="./dist/app.js"></script>
+  <style>
+    .index-wrapper {
+      position: relative;
+      width: 968px;
+      max-width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .problem-link {
+      text-decoration: none;
+      display: block;
+      padding: 5px 10px;
+      color: black;
+      font-size: 22px;
+    }
+    .home {
+      position: relative;
+      text-align: center;
+      margin: 0 auto;
+      width: 350px;
+      top: 0;
+      font-size: 30px;
+    }
+    .content-wrapper {
+      position: relative;
+      padding: 60px 0;
+      min-height: 400px;
+      width: 968px;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 <body>
-    <script>
-           var html = katex.renderToString("Katex Hello World");
-           document.body.html = html;
-    </script>
 </body>
 </html>
