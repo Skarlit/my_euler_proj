@@ -11,7 +11,7 @@ function parseXML(parser, xml) {
 }
 
 export function getIndex() {
-  return axios.get('/problems/index.json');
+  return axios.get('./problems/index.json');
 }
 
 class XML {
@@ -24,7 +24,7 @@ class XML {
     var manifest = {
       description: {
         filename: descriptFile,
-        url: `/problems/${id}/${descriptFile}`,
+        url: `./problems/${id}/${descriptFile}`,
         text: ""
       },
       codes: []
@@ -35,7 +35,7 @@ class XML {
       manifest.codes.push({
         language: language,
         source: source,
-        url: `/problems/${id}/${source}`,
+        url: `./problems/${id}/${source}`,
         text: ""
       });
     }
@@ -51,7 +51,7 @@ export function fetchProblem(id, cb) {
     } catch(e) {
       throw e;
     }
-  axios.get(`/problems/${problemId}/manifest.xml`)
+  axios.get(`./problems/${problemId}/manifest.xml`)
   .then(function (res) {
     var parser = getParser();
     var xmlTree = parseXML(parser, res.data);
