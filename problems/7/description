@@ -1,1 +1,1 @@
-<p>Lcm(2, ..., 20) is the product of p^n, where p is prime in (2, 20) and n is the highest power in p for all factorization for numbers in (2, 20)</p>
+<p> Sieve method using Guass's prime number theorem to estimate upperBound and do 110% range increment if there is no hit</p>
