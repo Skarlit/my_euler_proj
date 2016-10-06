@@ -1,5 +1,4 @@
 import React from 'react'
-import Latex  from "react-latex"
 import { Link } from 'react-router'
 import { languages } from "./config.js"
 import { fetchProblem, getIndex} from "./util.js"
@@ -15,7 +14,7 @@ export const Index = React.createClass({
     },
     render() {
       var indices = [];
-      for(var i = 0; i <= this.state.index.length; i++) {
+      for(var i = 0; i < this.state.index.length; i++) {
         var idx = this.state.index[i];
         indices.push(<Link className="problem-link" to={`/problem/${idx}`} key={`problem-${idx}`}>{idx}</Link>)
       }
@@ -80,9 +79,17 @@ export const NoMatch = React.createClass({
 });
 
 export const Description = React.createClass({
+    // shouldComponentUpdate(nextProp) {
+    //   return nextProp.text != this.props.text;
+    // },
+    componentDidMount() {
+      this.refs.description.innerHTML = this.props.text
+    },
+    componentDidUpdate() {
+      this.refs.description.innerHTML = this.props.text;
+    },
     render() {
-      return <div className="description">
-        <Latex>{this.props.text}</Latex>
+      return <div ref="description" className="description">
       </div>
     }
 })

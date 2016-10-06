@@ -55,10 +55,6 @@ webpackJsonp([0],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactLatex = __webpack_require__(227);
-
-	var _reactLatex2 = _interopRequireDefault(_reactLatex);
-
 	var _reactRouter = __webpack_require__(163);
 
 	var _config = __webpack_require__(252);
@@ -81,7 +77,7 @@ webpackJsonp([0],{
 	  },
 	  render: function render() {
 	    var indices = [];
-	    for (var i = 0; i <= this.state.index.length; i++) {
+	    for (var i = 0; i < this.state.index.length; i++) {
 	      var idx = this.state.index[i];
 	      indices.push(_react2.default.createElement(
 	        _reactRouter.Link,
@@ -172,16 +168,18 @@ webpackJsonp([0],{
 
 	var Description = exports.Description = _react2.default.createClass({
 	  displayName: 'Description',
+
+	  // shouldComponentUpdate(nextProp) {
+	  //   return nextProp.text != this.props.text;
+	  // },
+	  componentDidMount: function componentDidMount() {
+	    this.refs.description.innerHTML = this.props.text;
+	  },
+	  componentDidUpdate: function componentDidUpdate() {
+	    this.refs.description.innerHTML = this.props.text;
+	  },
 	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'description' },
-	      _react2.default.createElement(
-	        _reactLatex2.default,
-	        null,
-	        this.props.text
-	      )
-	    );
+	    return _react2.default.createElement('div', { ref: 'description', className: 'description' });
 	  }
 	});
 
