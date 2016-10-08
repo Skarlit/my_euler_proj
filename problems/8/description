@@ -1,0 +1,3 @@
+<p>We are windowing across array of digits. We can use a queue that enqueue the new digit, add it to the product. </p>
+<p>If the queue is full, we dequeue the tail and divide it off the product, so we don't repeat all 13 multiplications when the next digit comes in.</p>
+<p>Note that we need to handle 0, since we can't divide by 0, so when the next digit is 0, we flush the queue and reset the product</p>
