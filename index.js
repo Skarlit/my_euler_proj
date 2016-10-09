@@ -9,6 +9,13 @@ import { state, reducer} from './reducers.js'
 import { Index, NoMatch, Default } from "./components.js"
 import Content from "./containers/content.js"
 
+console.log(process.env.NODE_ENV);
+if (process.env.NODE_ENV == 'production') {
+  if(window.location.protocol != 'https') {
+    window.location = window.location.href.replace(/^http:/, 'https:');
+  }
+}
+
 window.onload = renderDOM;
 
 // Add the reducer to your store on the `routing` key
