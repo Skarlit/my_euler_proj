@@ -1,1 +1,1 @@
-<p>(Sum i)^2 - Sum i^2 =  Sum i *j where (j =/= i)</p>
+<p>$(\sum i)^2 - \sum i^2 =  \sum_{i \neq j} i *j $</p>

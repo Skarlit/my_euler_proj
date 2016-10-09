@@ -2,13 +2,15 @@ var webpack = require('webpack');
 var gulp = require("gulp");
 var gutil = require("gulp-util");
 
-webpack({
+
+var mode = process.argv[2] == "production" ? "production" : "development";
+var config = {
     context: __dirname,
     entry: {
       index: "./index.js",
-      vendor: ["react", "react-dom", "katex", "react-router", "axios", "react-latex"]
+      vendor: ["react", "react-dom", "react-router", "axios", "react-redux", "redux", "react-router-redux"]
     },
-    watch: true,
+    watch: mode != 'production',
     cache: true,
     module: {
       loaders: [
@@ -29,15 +31,21 @@ webpack({
     plugins: [
       new webpack.DefinePlugin({
         'process.env':{
-          'NODE_ENV': JSON.stringify('production')
+          'NODE_ENV': JSON.stringify(mode)
         }
       }),
       new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.js"),
-      //  new webpack.optimize.UglifyJsPlugin()
     ]
-},  function(err, stats) {
+}
+
+if (mode == "production") {
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin());
+}
+
+webpack(config,  function(err, stats) {
         if(err) throw new gutil.PluginError("webpack", err);
         gutil.log("[webpack]", stats.toString({
-            // output options
+          chunks: false,
+        colors: true
         }));
 });
