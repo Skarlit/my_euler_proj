@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import ReduxThunk from 'redux-thunk'
 import { state, reducer} from './reducers.js'
-import { Index, NoMatch, Home } from "./components.js"
+import { Index, NoMatch, Default } from "./components.js"
 import Content from "./containers/content.js"
 
 window.onload = renderDOM;
@@ -30,7 +30,7 @@ function renderDOM() {
     <Provider store={store}>
     <Router history={hashHistory}>
       <Route path="/" component={Index}>
-        <IndexRoute component={Home}/>
+        <IndexRoute component={Default}/>
         <Route path="problem/:id" component={Content}/>
         <Route path="*" component={NoMatch}/>
       </Route>

@@ -10,8 +10,8 @@ var config = {
       index: "./index.js",
       vendor: ["react", "react-dom", "react-router", "axios", "react-redux", "redux", "react-router-redux"]
     },
-    watch: mode != 'production',
-    cache: true,
+    watch: true,
+    cache: mode != 'production',
     module: {
       loaders: [
         {

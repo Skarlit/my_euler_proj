@@ -18,9 +18,11 @@ export const Index = React.createClass({
     }
 })
 
-export const Home = React.createClass({
+export const Default = React.createClass({
     render() {
-      return
+      return <div>
+
+      </div>
     }
 })
 
