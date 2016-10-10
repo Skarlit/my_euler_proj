@@ -11,9 +11,7 @@ import Content from "./containers/content.js"
 
 console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV == 'production') {
-  if(window.location.protocol != 'https') {
-    window.location = window.location.href.replace(/^http:/, 'https:');
-  }
+  if (location.protocol !== "https:") location.protocol = "https:";
 }
 
 window.onload = renderDOM;
