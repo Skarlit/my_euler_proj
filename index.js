@@ -9,10 +9,10 @@ import { state, reducer} from './reducers.js'
 import { Index, NoMatch, Default } from "./components.js"
 import Content from "./containers/content.js"
 
-console.log(process.env.NODE_ENV);
-if (process.env.NODE_ENV == 'production') {
-  if (location.protocol !== "https:") location.protocol = "https:";
-}
+// Disable this until I create self sign cert for local dev
+// if (process.env.NODE_ENV == 'production') {
+//   if (location.protocol !== "https:") location.protocol = "https:";
+// }
 
 window.onload = renderDOM;
 
