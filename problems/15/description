@@ -1,0 +1,3 @@
+<p>in $20\times20$ grids, since we can't backtrack, to reach the goal, we need to make 20 horizontal moves and 20 vertical moves. </p>
+<p>Which means we can build a move sequence by choosing 20 slot out of 40 moves as horizontal moves. This will precisely determines a sequence</p>
+<p>Hence the number of routes is simply ${40 \choose 20} = 137846528820$ </p>
