@@ -1,0 +1,3 @@
+<p> a curious number $ s = \sum^n_i a_i ! = \sum^n_i a_i 10^i $. Since the right hand side grows exponentially and left hand side grows linearly wrt to $n$</p>
+<p>There exists an $N$ such that $\sum^N_i a_i ! < \sum^N_i a_i 10^i$ for all $n \geq N$. The number of curios numbers are finite.</p>
+<p>To find a soft bound,  note  $\sum^N_i a_i ! \leq N (9!)$ and $10^N \leq \sum^N_i a_i 10^i$, if we equate them,  $N(9!) = 10^N$ and solve for $N$ using newton's method. We can find a soft bound $N$ to iterate. </p>
