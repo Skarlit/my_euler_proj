@@ -1,0 +1,10 @@
+<p>To find the max path, we can use bottom up dynamic programming</p>
+<p>Denote max sum at position $ij$ as $M_{ij}$, and value as $a_{ij}$. Then we have the following: </p>
+<p> $  M_{ij} =
+\begin{cases}
+a_{00},  & \text{if $i = j = 0$ } \\
+M_{i-1,j} + a_{ij}, & \text{if $j = 0$ } \\
+Max(M_{i-1,j}, M_{i-1,j-1}) + a_{ij}, & \text{if $j$ is not the last column of row $i$} \\
+M_{i-1,j-1} + a_{ij} , & \text{if $j$ is the last column of row $i$}
+\end{cases}
+$</p>
