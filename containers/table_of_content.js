@@ -38,8 +38,11 @@ class TableOfContent extends React.Component {
     this.props.availableIndices.forEach(idx => {
       return indices.push(<ProblemLink active={this.props.currentId == idx} idx={idx} key={'link-' + idx} />)
     });
-   return <div className="index-wrapper">
-      {indices}
+   return <div>
+      <div className="index-wrapper">
+        {indices}
+      </div>
+      <a href="http://ranxie.us" className="back-btn">Back</a>
     </div>
   }
 }

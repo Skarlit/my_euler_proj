@@ -9,7 +9,6 @@ export const Index = React.createClass({
         <div className="home">
             My solution to Project Euler
         </div>
-        <a href="http://ranxie.us" className="back-btn">Back</a>
         <div className="content-wrapper">
           {this.props.children}
         </div>
@@ -20,8 +19,10 @@ export const Index = React.createClass({
 
 export const Default = React.createClass({
     render() {
-      return <div>
-
+      return <div className="default-text">
+        <div>My Friend key is the following:</div>
+        <div>1036920_EoINn2FsiHsVzrrZKpGfc1Mk5X54VGRU</div>
+        <div>Feel Free to add : )</div>
       </div>
     }
 })

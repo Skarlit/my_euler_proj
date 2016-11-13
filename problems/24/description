@@ -1,5 +1,6 @@
-<p> if 0 is the first digit,  there are 9! ~ 360k permutation</p>
-<p> When the first digit becomes 2, we are at  9! + 9! + 9! > million-th permutation. We overshoot. So we look at permutations with 1 as the first digit.</p>
-<p>This provides a method to recursively search for the million-th permutation</p>
-<p> Let $s_i$ be a sequence of fixed digits up to ith position, let $n_i$ be the n-th permutation of $s_i$. $d_i$ be the last fixed digit of $s_i$ </p>
-<p>We check if $n_i < 10^6$ and $n_i + (10 - i)! > 10^6$, we advance i, else we bump up the digit in ith position and update $n_i$</p>
+<p>If 0 is the first digit,  there are 9! ~ 360k permutation</p>
+<p>The last perm with first digit as 2 would be $9! + 9! + 9! > 1000000$ permutation. We overshoot if first digit is 3. So we look at permutations with 2 as the first digit.</p>
+<p>We next look at 0 as the second digit, the last permutation would be $2 \times 9! + 8! < 1000000$. We undershoot with 2nd digit as 0, so we look at it again with 1 as the 2nd digit</p>
+<p>This provides a method to recursively search for the 1000000-th permutation</p>
+<p>Note that this is the same as expanding $1000000 = a_0 \times 9! + a_1 \times 8! + a_2 \times 7! + .... + a_8 \times 1!$</p>
+<p>Once we expand 100000 in that base, $a_i$ represent the index in an array result from removing element with indices $a_0,...a_{i-1}$ from  $[0, 1, 2 , 3, 4, 5, 6, 7, 8, 9]$. The reason for this is that all digits need to be unique</p>

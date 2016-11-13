@@ -9,6 +9,9 @@
   <script type="text/javascript" async
     src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
   </script>
+  <title>Solution to Project Euler</title>
+  <meta name="description" content="Solution to Project Euler" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -26,10 +29,15 @@
     .back-btn {
       text-decoration: none;
       font-size: 20px;
-      color: black;
-      right: 100px;
-      position: absolute;
+      color: white;
+      background: rgba(0,0,0,0.8);
+      padding: 3px 8px;
+      margin: 5px;
+      display: block;
       z-index: 999999;
+      text-align: center;
+      width: 60px;
+      margin: 20px auto;
     }
     .index-wrapper {
       position: relative;
@@ -39,6 +47,20 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+    }
+    .default-text {
+      position: absolute;
+      text-align: center;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+    }
+    .default-text div {
+      margin-bottom: 40px;
+      word-wrap: break-word;
     }
     .problem-link {
       display: block;
@@ -63,18 +85,31 @@
       top: 0;
       margin-top: 40px;
       font-size: 30px;
+      word-wrap: break-word;
     }
     .content-wrapper {
       position: relative;
       padding: 40px 0;
       min-height: 400px;
       width: 968px;
-      max-width: 80%;
+      max-width: 100%;
       margin: 0 auto;
     }
     .description {
       margin-top: 20px;
       border-top: 1px solid #d1d0d0;
+    }
+    .code-pre {
+      overflow-x: scroll;
+    }
+
+    @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 667px) {
+      .back-btn {
+        width: initial;
+        margin: initial;
+      }
     }
   </style>
   <style>
