@@ -1,0 +1,5 @@
+<p> if 0 is the first digit,  there are 9! ~ 360k permutation</p>
+<p> When the first digit becomes 2, we are at  9! + 9! + 9! > million-th permutation. We overshoot. So we look at permutations with 1 as the first digit.</p>
+<p>This provides a method to recursively search for the million-th permutation</p>
+<p> Let $s_i$ be a sequence of fixed digits up to ith position, let $n_i$ be the n-th permutation of $s_i$. $d_i$ be the last fixed digit of $s_i$ </p>
+<p>We check if $n_i < 10^6$ and $n_i + (10 - i)! > 10^6$, we advance i, else we bump up the digit in ith position and update $n_i$</p>

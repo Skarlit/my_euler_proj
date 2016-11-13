@@ -1,0 +1,2 @@
+<p>Note $F_n = \frac{\phi^n - \psi^n }{\sqrt{5}} $ where $\phi = \frac{\sqrt{5} + 1}{2}, \psi = \frac{\sqrt{5} - 1}{2}$. Also $\frac{\psi^n}{\sqrt{5}}$ is negligible. </p>
+<p>Therefore,  $F_n = round(\frac{\phi^n}{\sqrt{5}})$. So $n = round(\frac{log(F_n) + 0.5 * log(5)}{log(\phi)})$. With $F_n > 10^{999}$, we can solve for $n$ and round it.
