@@ -1,0 +1,7 @@
+<problem>
+  <description>description</description>
+  <codes>
+    <code type="c++">solver2.cpp</code>
+    <code type="python">solver.py</code>
+  </codes>
+</problem>
