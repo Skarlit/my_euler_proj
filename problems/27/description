@@ -1,0 +1,2 @@
+<p>$f(n) = n^2 + an + b$. $f(0) = b \rightarrow b$ is prime. $f(2) = 4 + 2a + b = prime \rightarrow b$ must be odd.</p>
+<p>Hence $b$ is odd prime. $f(1) = 1 + a + b \rightarrow a$ is odd. $f(b)$ divisible by $b$, hence $n < b$.</p>
