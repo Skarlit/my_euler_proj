@@ -1,0 +1,6 @@
+<p>Denote primes from 2 to 100 $p_0, ..., p_N$</p>
+<p>any $a$ can within 2 to 100 can be factorized as $a = \prod p_i^{a_i}$</p>
+<p>Then $a^b = \prod p_i^{ba_i}$, we just need to find the number of unique tuple $(ba_i)$ </p>
+<p>If we hash $b\log(a)$ directly, we get numerical error since $a^b$ can be very large.</p>
+<p>This will collapses multiple different but close numbers into one</p>
+<p>We need to find the prime factor power and sum $a_i \log (p_i)$ to avoid numerical error

@@ -1,0 +1,25 @@
+<p>Each circle has 4 corners denote $C_{n,0}, C_{n,1}, ...,C_{n,3}$.</p>
+<p>Let the length of the side of circle $n$ be $S_n$</p>
+<p>We have $$
+\begin{align}
+S_n &= 2 n \\
+ C_{0,3} &= 1 \\
+ C_{n,i} &= C_{n,i-1} + S_n \\
+ C_{n,0} &= C_{n-1,3} + S_n
+ \end{align} $$</p>
+
+ <p>$$
+ \begin{align}
+   S &= \sum^{500}_{n=1} \sum^{3}_{i=0}C_{n, i} + C{0, 3} \\
+     &= \sum^{500}_{n=1} (4C_{n,0} + 6S_n)) + 1 \\
+     &= 4 \sum^{500}_{n=1} C_{n, 0}  + 12 \sum^{500}_{n=1} n  + 1
+ \end{align}
+ $$
+</p>
+<p>Note that $C_{n,3} = C{n,0} + 3S_n$ and $C_{n+1, 0} = C_{n,3} + S_{n+1}$ </p>
+<p>Which gives $C_{n + 1, 0} = C_{n, 0} + 3S_{n} + S_{n+1} = 4n^2 + 6n + 3$ , so $$C_{n, 0} = 4n^2 - 2n + 1$$</p>
+<p>Hence $$
+\begin{align}
+ S &= 4(4 \sum n^2 - 2 \sum n + \sum 1) + 12 \sum n + 1 \\
+   &= \frac{8}{3}N(N+1)(2N+1) + 2N(N+1) + 4N + 1, (N=500)
+\end{align}$$</p>
