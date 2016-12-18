@@ -1,0 +1,6 @@
+<problem>
+  <description>description</description>
+  <codes>
+    <code type="c++">solver.cpp</code>
+  </codes>
+</problem>
